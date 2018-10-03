@@ -1,0 +1,46 @@
+{
+  "name": "heroku-billing",
+  "version": "0.0.0",
+  "author": "Tim Kurvers @timkurvers",
+  "repository": "github:hyperoslo/heroku-billing",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "postpack": "rm -f oclif.manifest.json npm-shrinkwrap.json",
+    "posttest": "npm run lint",
+    "prepack": "oclif-dev manifest && oclif-dev readme && npm shrinkwrap",
+    "test": "exit 1",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "files": [
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "keywords": [
+    "heroku",
+    "heroku-plugin",
+    "billing"
+  ],
+  "dependencies": {
+    "@oclif/command": "^1.5.1",
+    "@oclif/config": "^1.8.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.19.0",
+    "@oclif/plugin-help": "^2.1.2",
+    "eslint": "^5.6.1",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "oclif-example",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  }
+}
