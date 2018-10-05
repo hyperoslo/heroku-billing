@@ -41,5 +41,8 @@
   },
   "oclif": {
     "commands": "./src/commands"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
