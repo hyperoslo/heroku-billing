@@ -15,7 +15,9 @@ Licensed under the **MIT** license, see [LICENSE] for more information.
 
 ## Installation
 
-This is a Heroku client plugin and as such requires the [Heroku CLI] to be installed.
+This is a Heroku client plugin and requires the [Heroku CLI] to be installed.
+
+Install `heroku-billing` as a plugin from [npm]:
 
 ```shell
 heroku plugins:install heroku-billing
@@ -82,3 +84,4 @@ and if you're using this plugin we probably want to hire you.
 
 [Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
 [LICENSE]: LICENSE
+[npm]: https://www.npmjs.com/package/heroku-billing
