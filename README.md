@@ -1,50 +1,82 @@
-heroku-billing
-==============
+# Heroku Billing
 
-
-
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/heroku-billing.svg)](https://npmjs.org/package/heroku-billing)
-[![Downloads/week](https://img.shields.io/npm/dw/heroku-billing.svg)](https://npmjs.org/package/heroku-billing)
 [![License](https://img.shields.io/npm/l/heroku-billing.svg)](https://github.com/hyperoslo/heroku-billing/blob/master/package.json)
 
-<!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
-# Usage
-<!-- usage -->
-```sh-session
-$ npm install -g heroku-billing
-$ oclif-example COMMAND
-running command...
-$ oclif-example (-v|--version|version)
-heroku-billing/0.0.0 darwin-x64 node-v8.9.1
-$ oclif-example --help [COMMAND]
-USAGE
-  $ oclif-example COMMAND
-...
-```
-<!-- usagestop -->
-# Commands
-<!-- commands -->
-* [`oclif-example hello`](#oclif-example-hello)
+Generates a billing overview including dyno and add-on costs per application.
 
-## `oclif-example hello`
+Shared add-ons and fully scaled down processes are shown in gray.
 
-Describe the command here
+**Supported Node versions: 8 or higher**
 
-```
-USAGE
-  $ oclif-example hello
+Licensed under the **MIT** license, see [LICENSE] for more information.
 
-OPTIONS
-  -n, --name=name  name to print
+## Installation
 
-DESCRIPTION
-  ...
-  Extra documentation goes here
+This is a Heroku client plugin and as such requires the [Heroku CLI] to be installed.
+
+```shell
+heroku plugins:install heroku-billing
 ```
 
-_See code: [src/commands/hello.js](https://github.com/hyperoslo/heroku-billing/blob/v0.0.0/src/commands/hello.js)_
-<!-- commandsstop -->
+## Usage
+
+### Scope
+
+By default, the generated billing overview includes all applications.
+
+```shell
+heroku billing
+```
+
+Personal applications *only*:
+
+```shell
+heroku billing --personal
+```
+
+Team applications *only*:
+
+```shell
+heroku billing --team hyperoslo
+```
+
+A single application:
+
+```shell
+heroku billing -a hyper-rocks
+heroku billing -r production
+```
+
+### Formats
+
+By default, the generated billing overview uses Heroku's human-readable table
+format.
+
+Generate the billing overview in JSON format:
+
+```shell
+heroku billing --json
+```
+
+Generate the billing overview in CSV format:
+
+```shell
+heroku billing --csv
+```
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create pull request
+
+## Credits
+
+Hyper made this. We're a digital communications agency with a passion for good code,
+and if you're using this plugin we probably want to hire you.
+
+[Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
+[LICENSE]: LICENSE
