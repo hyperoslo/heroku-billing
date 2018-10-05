@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint .",
     "posttest": "npm run lint",
-    "test": "exit 1"
+    "test": "echo 'No tests yet'"
   },
   "files": [
     "/src"
