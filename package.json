@@ -6,10 +6,13 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
+    "postpack": "rm -f oclif.manifest.json",
     "posttest": "npm run lint",
+    "prepack": "oclif-dev manifest",
     "test": "echo 'No tests yet'"
   },
   "files": [
+    "/oclif.manifest.json",
     "/src"
   ],
   "keywords": [
@@ -29,6 +32,7 @@
     "json2csv": "^4.2.1"
   },
   "devDependencies": {
+    "@oclif/dev-cli": "^1.19.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
