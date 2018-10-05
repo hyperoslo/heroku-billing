@@ -11,6 +11,8 @@ Shared add-ons and fully scaled down processes are shown in gray.
 
 Licensed under the **MIT** license, see [LICENSE] for more information.
 
+![Heroku Billing](https://user-images.githubusercontent.com/378235/46540706-647a2980-c8ba-11e8-80c5-9d4f404c04fb.png)
+
 ## Installation
 
 This is a Heroku client plugin and as such requires the [Heroku CLI] to be installed.
