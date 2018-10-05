@@ -1,5 +1,5 @@
 {
-  "name": "heroku-billing",
+  "name": "@hyperoslo/heroku-billing",
   "version": "1.0.0",
   "author": "Tim Kurvers @timkurvers",
   "repository": "github:hyperoslo/heroku-billing",

@@ -1,7 +1,7 @@
 # Heroku Billing
 
-[![Version](https://img.shields.io/npm/v/heroku-billing.svg)](https://npmjs.org/package/heroku-billing)
-[![License](https://img.shields.io/npm/l/heroku-billing.svg)](https://github.com/hyperoslo/heroku-billing/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/hyperoslo/heroku-billing.svg)](https://npmjs.org/package/@hyperoslo/heroku-billing)
+[![License](https://img.shields.io/npm/l/hyperoslo/heroku-billing.svg)](https://github.com/hyperoslo/heroku-billing/blob/master/package.json)
 
 Generates a billing overview including dyno and add-on costs per application.
 
@@ -20,7 +20,7 @@ This is a Heroku client plugin and requires the [Heroku CLI] to be installed.
 Install `heroku-billing` as a plugin from [npm]:
 
 ```shell
-heroku plugins:install heroku-billing
+heroku plugins:install @hyperoslo/heroku-billing
 ```
 
 ## Usage
@@ -84,4 +84,4 @@ and if you're using this plugin we probably want to hire you.
 
 [Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
 [LICENSE]: LICENSE
-[npm]: https://www.npmjs.com/package/heroku-billing
+[npm]: https://www.npmjs.com/package/@hyperoslo/heroku-billing
