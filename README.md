@@ -1,7 +1,7 @@
 # Heroku Billing
 
-[![Version](https://img.shields.io/npm/v/hyperoslo/heroku-billing.svg)](https://npmjs.org/package/@hyperoslo/heroku-billing)
-[![License](https://img.shields.io/npm/l/hyperoslo/heroku-billing.svg)](https://github.com/hyperoslo/heroku-billing/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@hyperoslo/heroku-billing.svg)](https://npmjs.org/package/@hyperoslo/heroku-billing)
+[![License](https://img.shields.io/npm/l/@hyperoslo/heroku-billing.svg)](https://github.com/hyperoslo/heroku-billing/blob/master/package.json)
 
 Generates a billing overview including dyno and add-on costs per application.
 
