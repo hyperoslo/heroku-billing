@@ -1,6 +1,6 @@
 {
   "name": "heroku-billing",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Tim Kurvers @timkurvers",
   "repository": "github:hyperoslo/heroku-billing",
   "license": "MIT",
