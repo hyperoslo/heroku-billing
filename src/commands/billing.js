@@ -231,11 +231,23 @@ BillingCommand.description = `
 
 BillingCommand.flags = {
   app: flagtypes.app(),
-  csv: flagtypes.boolean({ description: 'return billing overview in csv format' }),
-  json: flagtypes.boolean({ description: 'return billing overview in json format' }),
-  personal: flagtypes.boolean({ description: 'only list personal apps' }),
+  csv: flagtypes.boolean({
+    description: 'return billing overview in csv format',
+    exclusive: ['json'],
+  }),
+  json: flagtypes.boolean({
+    description: 'return billing overview in json format',
+    exclusive: ['csv'],
+  }),
+  personal: flagtypes.boolean({
+    description: 'only list personal apps',
+    exclusive: ['app', 'team'],
+  }),
   remote: flagtypes.remote(),
-  team: flagtypes.string({ description: 'only list apps in given team' }),
+  team: flagtypes.string({
+    description: 'only list apps in given team',
+    exclusive: ['app', 'personal'],
+  }),
 };
 
 module.exports = BillingCommand;
