@@ -1,6 +1,6 @@
 {
   "name": "@hyperoslo/heroku-billing",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Generates a Heroku billing overview",
   "author": "Tim Kurvers @timkurvers",
   "repository": "github:hyperoslo/heroku-billing",
