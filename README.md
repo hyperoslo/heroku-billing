@@ -52,6 +52,12 @@ heroku billing -a hyper-rocks
 heroku billing -r production
 ```
 
+Filter applications matching given pattern:
+
+```shell
+heroku billing --pattern foobar
+```
+
 ### Formats
 
 By default, the generated billing overview uses Heroku's human-readable table

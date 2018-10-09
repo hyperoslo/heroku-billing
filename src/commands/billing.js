@@ -49,6 +49,10 @@ class BillingCommand extends Command {
       apps = await this.fetch('/apps');
     }
 
+    if (flags.pattern) {
+      apps = apps.filter(app => app.name.includes(flags.pattern));
+    }
+
     const overview = await Promise.all(
       apps.map(async (app) => {
         const addons = (await this.fetch(`/apps/${app.name}/addons`))
@@ -238,6 +242,9 @@ BillingCommand.flags = {
   json: flagtypes.boolean({
     description: 'return billing overview in json format',
     exclusive: ['csv'],
+  }),
+  pattern: flagtypes.string({
+    description: 'only list apps matching given pattern',
   }),
   personal: flagtypes.boolean({
     description: 'only list personal apps',
