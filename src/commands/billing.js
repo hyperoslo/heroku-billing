@@ -19,8 +19,6 @@ const price = dollars => (
   })
 );
 
-const BUILDPACK_DYNO_TYPES = ['console', 'rake'];
-
 class BillingCommand extends Command {
   async fetch(path) {
     const response = await this.heroku.get(path);
@@ -68,7 +66,7 @@ class BillingCommand extends Command {
 
         const dynos = (await this.fetch(`/apps/${app.name}/formation`))
           .filter(dyno => (
-            !BUILDPACK_DYNO_TYPES.includes(dyno.type) || dyno.quantity > 0
+            flags['include-inactive-dynos'] || dyno.quantity > 0
           ))
           .map((dyno) => {
             dyno.size = dynoSizesByName[dyno.size];
@@ -238,6 +236,9 @@ BillingCommand.flags = {
   csv: flagtypes.boolean({
     description: 'return billing overview in csv format',
     exclusive: ['json'],
+  }),
+  'include-inactive-dynos': flagtypes.boolean({
+    description: 'includes inactive dynos',
   }),
   json: flagtypes.boolean({
     description: 'return billing overview in json format',

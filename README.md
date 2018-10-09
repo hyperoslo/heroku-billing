@@ -5,8 +5,6 @@
 
 Generates a billing overview including dyno and add-on costs per application.
 
-Shared add-ons and fully scaled down processes are shown in gray.
-
 **Supported Node versions: 8 or higher**
 
 Licensed under the **MIT** license, see [LICENSE] for more information.
@@ -57,6 +55,19 @@ Filter applications matching given pattern:
 ```shell
 heroku billing --pattern foobar
 ```
+
+### Inactive dynos & shared add-ons
+
+Inactive dynos – fully scaled down processes – are not included in the overview
+by default as they generate a lot of clutter.
+
+To include all inactive dynos, shown in gray:
+
+```shell
+heroku billing --include-inactive-dynos
+```
+
+Add-ons shared between applications are always shown in gray.
 
 ### Formats
 
